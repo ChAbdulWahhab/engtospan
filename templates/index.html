@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HTML Translator (Structure Preserved)</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-gray-50 min-h-screen">
+    <div class="container mx-auto px-4 py-8 max-w-3xl">
+        <h1 class="text-3xl font-bold text-gray-800 mb-6 border-b pb-2">HTML Structure-Preserving Translator</h1>
+        
+        <div class="space-y-6">
+            {% if error_message %}
+            <div class="bg-red-50 border border-red-200 text-red-700 px-4 py-3 rounded-md" role="alert">
+                {{ error_message }}
+            </div>
+            {% endif %}
+            
+            <form method="POST" class="space-y-6">
+                <div class="space-y-2">
+                    <label for="html_input" class="block text-sm font-medium text-gray-700">Enter HTML Code:</label>
+                    <textarea 
+                        id="html_input" 
+                        name="html_input" 
+                        required 
+                        class="w-full h-64 px-3 py-2 text-gray-700 border rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500 font-mono text-sm"
+                    >{{ original_html }}</textarea>
+                </div>
+                
+                <button 
+                    type="submit" 
+                    class="px-4 py-2 bg-emerald-600 text-white rounded-md hover:bg-emerald-700 transition-colors duration-300 focus:outline-none focus:ring-2 focus:ring-emerald-500 focus:ring-offset-2"
+                >
+                    Translate
+                </button>
+                
+                <div class="space-y-2">
+                    <label for="translated_html" class="block text-sm font-medium text-gray-700">Translated HTML (Spanish):</label>
+                    <textarea 
+                        id="translated_html" 
+                        readonly 
+                        class="w-full h-64 px-3 py-2 text-gray-700 border rounded-md bg-gray-50 font-mono text-sm"
+                    >{{ translated_html }}</textarea>
+                </div>
+            </form>
+        </div>
+    </div>
+</body>
+</html>

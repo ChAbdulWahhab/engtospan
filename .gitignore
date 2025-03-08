@@ -1,0 +1,52 @@
+# Byte-compiled / optimized / DLL files
+__pycache__/
+*.py[cod]
+*$py.class
+
+# Virtual environment
+venv/
+env/
+*.venv
+*.env
+
+# Environment variables and secrets
+.env
+*.env.local
+*.env.dev
+*.env.production
+*.env.test
+
+# Flask-specific
+instance/
+*.sqlite3
+*.db
+*.pid
+
+# Logs
+logs/
+*.log
+nohup.out
+
+# Cache
+*.cache
+cache/
+*.pytest_cache/
+.coverage
+.coverage.*
+
+# Pytest and testing
+htmlcov/
+.tox/
+.nosetests*
+
+# Jupyter Notebook
+.ipynb_checkpoints
+
+# VSCode
+.vscode/
+
+# MacOS
+.DS_Store
+
+# PyCharm
+.idea/
